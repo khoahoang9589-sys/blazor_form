@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "fL8rShA5Lic=",
+  "success": true,
+  "projectFilePath": "D:\\_cybersoft\\blazor_form\\blazor_form.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\KhoaHoang-DNI\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.11\\microsoft.aspnetcore.app.internal.assets.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

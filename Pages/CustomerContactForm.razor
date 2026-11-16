@@ -1,0 +1,84 @@
+@page "/customer-contact"
+
+<PageTitle>Customer Contact Form</PageTitle>
+
+<div class="container">
+    <div class="card shadow-sm mx-auto my-4" style="max-width: 600px;">
+        <div class="card-body p-4">
+            <h4 class="text-center fw-bold mb-4">Customer Contact Form</h4>
+
+            <EditForm Model="@contactModel" OnValidSubmit="HandleValidSubmit">
+                <DataAnnotationsValidator />
+
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name *</label>
+                    <InputText id="fullName" class="form-control" placeholder="Enter your full name" @bind-Value="contactModel.FullName" />
+                    <ValidationMessage For="@(() => contactModel.FullName)" class="text-danger small" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email *</label>
+                    <InputText id="email" class="form-control" placeholder="Enter your email" @bind-Value="contactModel.Email" />
+                    <ValidationMessage For="@(() => contactModel.Email)" class="text-danger small" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <InputText id="phone" class="form-control" placeholder="Enter your phone number" @bind-Value="contactModel.PhoneNumber" />
+                    <ValidationMessage For="@(() => contactModel.PhoneNumber)" class="text-danger small" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <InputText id="address" class="form-control" placeholder="Enter your address" @bind-Value="contactModel.Address" />
+                    <ValidationMessage For="@(() => contactModel.Address)" class="text-danger small" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message *</label>
+                    <InputTextArea id="message" class="form-control" rows="4" placeholder="Enter your message" @bind-Value="contactModel.Message" />
+                    <ValidationMessage For="@(() => contactModel.Message)" class="text-danger small" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="service" class="form-label">Select Service *</label>
+                    <InputSelect id="service" class="form-select" @bind-Value="contactModel.Service">
+                        <option value="">Choose...</option>
+                        @foreach (var s in services)
+                        {
+                            <option value="@s">@s</option>
+                        }
+                    </InputSelect>
+                    <ValidationMessage For="@(() => contactModel.Service)" class="text-danger small" />
+                </div>
+
+                <div class="form-check mb-3">
+                    <InputCheckbox id="agree" class="form-check-input" @bind-Value="contactModel.AgreeTerms" />
+                    <label class="form-check-label" for="agree">I agree to the terms and conditions *</label>
+                    <ValidationMessage For="@(() => contactModel.AgreeTerms)" class="text-danger small" />
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+
+                @if (isSubmitted)
+                {
+                    <div class="alert alert-success mt-3 mb-0 text-center">
+                        Gửi liên hệ thành công!
+                    </div>
+                }
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@code {
+    private CustomerContactModel contactModel = new CustomerContactModel();
+    private List<string> services = new List<string> { "Consulting", "Technical Support", "Product Inquiry", "Customer Care" };
+    private bool isSubmitted = false;
+
+    private void HandleValidSubmit()
+    {
+        isSubmitted = true;
+        Console.WriteLine($"Submitted Customer Contact: {JsonSerializer.Serialize(contactModel)}");
+    }
+}
