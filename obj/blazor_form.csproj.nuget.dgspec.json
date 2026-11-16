@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_cybersoft\\blazor_form\\blazor_form.csproj": {}
+    "d:\\_cybersoft\\blazor_form\\blazor_form.csproj": {}
   },
   "projects": {
-    "D:\\_cybersoft\\blazor_form\\blazor_form.csproj": {
+    "d:\\_cybersoft\\blazor_form\\blazor_form.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_cybersoft\\blazor_form\\blazor_form.csproj",
+        "projectUniqueName": "d:\\_cybersoft\\blazor_form\\blazor_form.csproj",
         "projectName": "blazor_form",
-        "projectPath": "D:\\_cybersoft\\blazor_form\\blazor_form.csproj",
+        "projectPath": "d:\\_cybersoft\\blazor_form\\blazor_form.csproj",
         "packagesPath": "C:\\Users\\KhoaHoang-DNI\\.nuget\\packages\\",
-        "outputPath": "D:\\_cybersoft\\blazor_form\\obj\\",
+        "outputPath": "d:\\_cybersoft\\blazor_form\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

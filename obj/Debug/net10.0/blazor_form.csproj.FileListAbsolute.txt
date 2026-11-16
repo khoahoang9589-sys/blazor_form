@@ -33,3 +33,5 @@ d:\_cybersoft\blazor_form\obj\Debug\net10.0\refint\blazor_form.dll
 d:\_cybersoft\blazor_form\obj\Debug\net10.0\blazor_form.pdb
 d:\_cybersoft\blazor_form\obj\Debug\net10.0\blazor_form.genruntimeconfig.cache
 d:\_cybersoft\blazor_form\obj\Debug\net10.0\ref\blazor_form.dll
+D:\_cybersoft\blazor_form\obj\Debug\net10.0\blazor_form.sourcelink.json
+d:\_cybersoft\blazor_form\obj\Debug\net10.0\compressed\7bg87z2r9z-{0}-cpj8z53zn4-cpj8z53zn4.gz
